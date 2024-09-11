@@ -1,0 +1,484 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+20&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #e6f0e5;
+}
+
+header {
+  margin: 0 2.5rem;
+  background-color: #0c321b;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 5px 5px 9px black;
+}
+header nav .logo {
+  width: 140px;
+}
+header nav .logo img {
+  width: 100%;
+}
+header nav ul {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+header nav ul li:hover > ul {
+  display: block;
+}
+header nav ul li ul {
+  display: none;
+  position: absolute;
+}
+header nav ul li ul li {
+  position: relative;
+  background-color: #0c321b;
+  padding: 0;
+  margin: 0;
+  box-shadow: 5px 5px 9px black;
+}
+header nav ul li a {
+  font-size: 1.3rem;
+  display: inline-block;
+  margin: 0 1rem;
+  padding: 1rem;
+  color: white;
+  font-family: "Jersey 20", sans-serif;
+}
+header nav ul li a:hover {
+  background-color: whitesmoke;
+  color: black;
+  font-size: 1.7rem;
+  transition-duration: 500ms;
+}
+header nav div {
+  align-items: center;
+  justify-content: center;
+}
+header nav div .login img {
+  max-width: 30px;
+  margin: 28px 36px;
+}
+#hamburguesas-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+#hamburguesas-container h3,h4{
+
+  text-align: center;
+}
+#hamburguesas-container .hamburguesaAgregar{
+  margin: 0 50% 0 50%;
+}
+main {
+  margin: 2rem 2.5rem;
+}
+main .titulo {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0c321b;
+  text-align: center;
+  margin: 3rem;
+  font-size: 3rem;
+  letter-spacing: 1rem;
+}
+main .contenido {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  font-size: 110%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.IrAlCarrito{
+  text-align: center;
+  margin-top: 40px;
+  border: 1px black solid;
+}
+#cart-section{
+  border: 1px black solid;
+  margin: 1rem 2rem 1rem 2rem;
+  text-align: center;
+}
+main .contenido .imagenes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr;
+  grid-template-areas: "img1 img1" "img2 img3";
+  gap: 1rem;
+  object-fit: cover;
+}
+main .contenido .imagenes .img1 {
+  grid-area: img1;
+}
+main .contenido .imagenes .img2 {
+  grid-area: img2;
+}
+main .contenido .imagenes .img3 {
+  grid-area: img3;
+}
+main .contenido .imagenes img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+main h2,
+main h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+footer {
+  background-color: #0c321b;
+  margin: 0 2.5rem;
+  padding: 1rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px -5px 12px 1px black;
+  color: #e6f0e5;
+  text-align: center;
+}
+
+@media screen and (max-width: 1281px) {
+  main .contenido {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  main .imagenes {
+    gap: 0.5rem;
+    object-fit: cover;
+  }
+  main .texto h2 {
+    font-size: 2.3rem;
+  }
+  main .texto h3 {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 926px) {
+  header {
+    margin: 0 1.5rem;
+  }
+  header nav {
+    flex-direction: column;
+  }
+  header nav ul {
+    gap: 1rem;
+    justify-content: space-around;
+  }
+  header nav ul li {
+    padding: 0rem;
+  }
+  header nav ul li a {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  header nav ul li a:hover {
+    background-color: whitesmoke;
+    color: black;
+    font-size: 1.1rem;
+    transition-duration: 500ms;
+  }
+  header nav div .login img {
+    margin: 0.5rem;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+  }
+  header nav div {
+    display: flex;
+    justify-content: end;
+  }
+  main {
+    margin: 2rem 1.5rem;
+  }
+  main .titulo {
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: 0.3rem;
+    margin-bottom: 1rem;
+  }
+  main .texto h3 {
+    font-size: 1rem;
+  }
+  footer p {
+    font-size: 0.7rem;
+  }
+}
+.variedades span {
+  font-size: 1.3rem;
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.cervezas {
+  margin-bottom: 4rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.cervezas .variedades {
+  width: 320px;
+  justify-content: center;
+}
+.cervezas .variedades h2 {
+  letter-spacing: 0.8rem;
+  margin-bottom: 3rem;
+}
+.cervezas .variedades li {
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+.cervezas .latas {
+  width: 15%;
+  padding: 3rem;
+  border: 1px black solid;
+  box-shadow: 0px 0px 29px -4px gray;
+}
+
+.latas ul,
+.variedades ul {
+  padding: 0;
+  border: 1px black solid;
+  box-shadow: 0px 0px 29px -4px gray;
+}
+
+.latas img,
+.variedades img {
+  width: 100%;
+}
+
+.variedades h3,
+.latas h3 {
+  text-align: center;
+  border-bottom: black 1px solid;
+  margin-bottom: 0.5rem;
+}
+
+.variedades h4,
+.latas h4 {
+  text-align: center;
+  font-size: 1rem;
+  color: darkcyan;
+}
+
+.variedades,
+.latas {
+  height: 60%;
+}
+
+@media screen and (max-width: 1500px) {
+  main .cervezas .variedades {
+    width: 40%;
+  }
+  main .cervezas .latas {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .cervezas .latas h3 {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 850px) {
+  main .cervezas .latas h3 {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 775px) {
+  main .cervezas .latas h3 {
+    font-size: 1rem;
+  }
+  .cervezas {
+    flex-direction: column;
+    align-content: center;
+  }
+  main .cervezas .variedades {
+    width: 100%;
+  }
+  main .cervezas .latas {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 587px) {
+  .cervezas h5 {
+    font-size: 80%;
+  }
+  .variedades span {
+    font-size: 1rem;
+  }
+  main .cervezas .variedades {
+    width: 100%;
+  }
+  main .cervezas .latas {
+    width: 80%;
+  }
+}
+header .header {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: white;
+  box-shadow: 3px 2px 12px 1px black;
+  height: 4rem;
+}
+header .header .titulo {
+  justify-content: center;
+  align-items: center;
+}
+header .header .logoback {
+  position: absolute;
+  left: 0px;
+}
+header .header .logoback img {
+  max-width: 30px;
+}
+
+.mainlogin {
+  height: 79vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/fondopatagonia.png);
+  background-size: cover;
+}
+.mainlogin .formulario {
+  background-color: rgba(85, 99, 85, 0.2);
+  box-shadow: 3px 2px 12px 1px black;
+  padding: 2rem;
+  font-weight: 600;
+  text-shadow: white 3px 0 10px;
+  color: black;
+}
+.mainlogin input {
+  border: 1px black solid !important;
+}
+.mainlogin .registrate {
+  display: flex;
+  flex-direction: row;
+  margin: 1.5rem 0 0 0;
+  gap: 0.5rem;
+}
+.mainlogin .registrate p {
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 1197px) {
+  .mainlogin {
+    background-size: contain;
+  }
+}
+@media screen and (max-width: 926px) {
+  .loginheader {
+    margin: 0 2rem;
+  }
+}
+.mainubicacion {
+  height: 79vh;
+}
+.mainubicacion .mapa {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.mainubicacion .mapa iframe {
+  box-shadow: 3px 2px 30px 1px black;
+  width: 80%;
+  height: 500px;
+}
+
+.maincontacto {
+  height: 79vh;
+}
+.maincontacto ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 0;
+  padding-top: 7rem;
+}
+.maincontacto ul li {
+  border: 1px solid;
+  width: 70%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 3px 2px 14px 1px black;
+  padding: 0 3rem 0 3rem;
+}
+.maincontacto ul li img {
+  width: 3%;
+}
+.maincontacto ul li h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  width: 40%;
+}
+.maincontacto ul li a {
+  color: goldenrod;
+  text-decoration: none;
+  width: 80%;
+  text-align: center;
+}
+.maincontacto ul li:hover {
+  height: 3.5rem;
+  background-image: url(fondopatagonia.png);
+  background-size: cover;
+  font-size: 1.5rem;
+  transition-duration: 500ms;
+}
+
+@media screen and (max-width: 1290px) {
+  .maincontacto ul li img {
+    width: 5%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .maincontacto ul li img {
+    width: 7%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .maincontacto ul li img {
+    width: 10%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .maincontacto ul li img {
+    width: 15%;
+  }
+  .maincontacto ul li {
+    padding: 0 1rem 0 1rem;
+  }
+}
+.productosback {
+  position: absolute;
+  left: 0px;
+  width: 30px;
+}
+.productosback img {
+  max-width: 100%;
+}
+
+/*# sourceMappingURL=estilos.css.map */
