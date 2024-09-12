@@ -99,6 +99,19 @@ main .contenido {
   font-size: 110%;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+.subtitulo {
+  text-align: center;
+  font-size: 2rem;
+  border: 1px black solid;
+}
+.cantidad-clientes{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 1rem;
+  border: 1px black solid;
+  margin-bottom: 4rem;
+}
 .IrAlCarrito{
   text-align: center;
   margin-top: 40px;
@@ -150,6 +163,7 @@ footer {
   color: #e6f0e5;
   text-align: center;
 }
+
 
 @media screen and (max-width: 1281px) {
   main .contenido {
@@ -480,5 +494,16 @@ header .header .logoback img {
 .productosback img {
   max-width: 100%;
 }
-
+#titulo.dark-mode{
+  color: white;
+}
+body.dark-mode{
+  background-color:#003515 ;
+  color: white;
+}
+section.search-mode{
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+}
 /*# sourceMappingURL=estilos.css.map */

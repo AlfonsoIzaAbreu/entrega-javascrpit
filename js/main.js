@@ -3,76 +3,19 @@ function despedirse(){
 }
 
 
-// const hamburguesas = [hamburguesa1,hamburguesa2,hamburguesa3,hamburguesa4]
-
-// pregunta=prompt("van a comer hamburguesas? (si/no)")
-// if(pregunta == "si" ) {
-// 		alert("bien, que las disfruten")
-// 	}else {
-// 		alert("es unicamente una hamburgueseria")
-// 	}
-
-// do {
-
-// 	pregunta=parseInt(prompt("cuantos son para comer?"))
-// if(pregunta <= 5 ) {
-// 		alert("podes reservar aqui")
-// 	}else {
-// 		alert("solo nos queda una mesa de 5 personas")
-// 	}
-// } while (pregunta >= 6)
-
-// let continuar = true
-//     while (continuar) {
-//         let consultas = parseInt(prompt("ingrese: \n 1 para ver las hamburguesas \n 2- para ver la ubicacion  \n 3- para reservar  \n otro numero para salir"))
-
-//         switch(consultas) {
-//         case 1:
-//             console.log("El precio de las hamburguesas esta en dolares")
-//             console.log (hamburguesas)
-//             break
-//         case 2:
-//             console.log("la blanqueada 271")
-//             break
-//         case 3:
-//             console.log("reserva tu lugar de jue a dom, hasta las 10pm.")
-//             break
-//         default:
-//             console.log(despedirse())
-//             break
-//         }
-        
-//         let confirmacion = prompt ("desea hacer otra consulta? (SI/NO)").toLowerCase()
-//         if(confirmacion == "no") {
-//             continuar = false
-//             console.log("gracias!") 
-//         }
-//     }
 
 
-// let dolares = parseInt=(prompt("Calcula el precio de tu pedido en pesos"))
+const colorModeButton = document.querySelector("#color-mode")
+const body = document.body
+const header = document.querySelector("titulo")
 
-// const convertidor = dolares => console.log (dolares*41)
+colorModeButton.addEventListener("click", cambiarModoColor)
 
-// console.log(convertidor(dolares))
-
-let counter = document.getElementById("counter")
-let sumar =  document.getElementById("plus-button")
-let restar =  document.getElementById("minus-button")
-let contador = 0
-
-
-sumar.onclick = () => {
-    contador ++
+function cambiarModoColor() {
+    body.classList.toggle("dark-mode")
+    titulo.classList.toggle("dark-mode")
 }
-// restar.onclick = () => {
-//     if (contador === 0){
-//         restar.disabled = true
-//     }else {
-//         contador --
-//         counter.innerHTML = contador
-//     }
-// }
+
 
 const hamburguesas = [
     {
@@ -108,6 +51,8 @@ let cartburguers = []
 let hamburguesasContainer = document.getElementById("hamburguesas-container")
 
 function renderBurguers(burguersArray){
+    hamburguesasContainer.innerHTML = "";
+
     burguersArray.forEach((hamburguesa) => {
     const card = document.createElement("div")
     card.innerHTML =  ` <h3>Hamburguesa: ${hamburguesa.nombre}</h3>
@@ -128,7 +73,6 @@ function addToCartbutton () {
             const burguerId = e.currentTarget.id
             const selectedBurgers = hamburguesas.find(hamburguesa => hamburguesa.id == burguerId)
             cartburguers.push(selectedBurgers)
-            console.log(cartburguers)
 
             localStorage.setItem("cartBurguers",JSON.stringify(cartburguers))
             
@@ -136,19 +80,62 @@ function addToCartbutton () {
     })
 }
 
-
-
-
-
-
-
-
 let input = document.getElementById("search")
 input.onchange = () => {
     const element = hamburguesas.find((hamburguesa) => hamburguesa.nombre === input.value)
     console.log(element)
 }
 
+const handleSearch = () => {
+    const searchTerm = input.value.toLowerCase()
+    const filteredProducts = hamburguesas.filter((hamburguesa) => hamburguesa.nombre.toLowerCase().startsWith(searchTerm));
+    renderBurguers(filteredProducts)
+}
+
+input.addEventListener("input", handleSearch)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let counter = document.getElementById("counter")
+// let sumar =  document.getElementById("plus-button")
+// let restar =  document.getElementById("minus-button")
+// let contador = 0
+
+
+// sumar.onclick = () => {
+//     contador ++
+//     counter.innerHTML = contador
+//     restar.disabled = false
+// }
+// restar.onclick = () => {
+//     if (contador === 0){
+//         restar.disabled = true
+//     }else {
+//         contador --
+//         counter.innerHTML = contador
+//     }
+// }
+// let dolares = parseInt=(prompt("Calcula el precio de tu pedido en pesos"))
+
+// const convertidor = dolares => console.log (dolares*41)
+
+// console.log(convertidor(dolares))
