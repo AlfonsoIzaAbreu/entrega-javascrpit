@@ -12,3 +12,24 @@ function renderCarrito (cartItem){
     })
 }
 renderCarrito(cartStorage)
+
+let emails = []
+
+const botonComprar = document.querySelector('.botonComprar')
+botonComprar.addEventListener('click', comprar)
+
+async function comprar(){
+    cartContainer.innerHTML = '';
+   
+    const { value: email } = await Swal.fire({
+        title: "INGRESE SU EMAIL",
+        input: "email",
+        inputLabel: "Un agente se contactara para continuar con la compra",
+        inputPlaceholder: "ejemplo@gmail.com"
+      });
+      if (email) {
+        Swal.fire(`Te contactaremos a tu mail: ${email}`);
+         localStorage.setItem("emails",JSON.stringify(emails))
+      }
+   
+}

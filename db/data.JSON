@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+	    "nombre": "bacon",
+	    "tipo": "doble",
+	    "precio": 5
+    },
+    {
+        "id": 2,
+	    "nombre": "big mc",
+	    "tipo": "simple",
+	    "precio": 3.5
+    },
+    {
+        "id": 3,
+	    "nombre": "cheddar melt",
+        "tipo": "doble",
+	    "precio": 5
+    },
+    {
+        "id": 4,
+	    "nombre": "cheseeburger",
+	    "tipo": "triple",
+	    "precio": 5.5
+    
+    }
+]

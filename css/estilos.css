@@ -296,7 +296,10 @@ footer {
 .latas {
   height: 60%;
 }
-
+.button{
+  display: flex;
+  justify-content: center;
+}
 @media screen and (max-width: 1500px) {
   main .cervezas .variedades {
     width: 40%;
