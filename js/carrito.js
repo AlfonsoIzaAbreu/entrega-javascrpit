@@ -13,8 +13,6 @@ function renderCarrito (cartItem){
 }
 renderCarrito(cartStorage)
 
-let emails = []
-
 const botonComprar = document.querySelector('.botonComprar')
 botonComprar.addEventListener('click', comprar)
 
@@ -29,7 +27,7 @@ async function comprar(){
       });
       if (email) {
         Swal.fire(`Te contactaremos a tu mail: ${email}`);
-         localStorage.setItem("emails",JSON.stringify(emails))
+    
       }
    
 }
